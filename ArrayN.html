@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayN</title>
+</head>
+<body>
+    <script>
+function sumArray(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    return sum;
+}
+let array1 = [1, 2, 3, 4, 5];
+let array2 = [10, 20, 30, 40, 50];
+let array3 = [-1, -2, -3, -4, -5];
+
+console.log("Sum of array1: " + sumArray(array1)); // Output: 15
+console.log("Sum of array2: " + sumArray(array2)); // Output: 150
+console.log("Sum of array3: " + sumArray(array3)); // Output: -15
+
+    </script>
+</body>
+</html>
