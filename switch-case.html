@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch-case</title>
+</head>
+<body>
+    <script>
+        // Function to perform addition
+function add(a, b) {
+    return a + b;
+}
+
+// Function to perform subtraction
+function subtract(a, b) {
+    return a - b;
+}
+
+// Function to perform multiplication
+function multiply(a, b) {
+    return a * b;
+}
+
+// Function to perform division
+function divide(a, b) {
+    if (b !== 0) {
+        return a / b;
+    } else {
+        return "Cannot divide by zero";
+    }
+}
+
+// User menu choice
+var choice = prompt("Choose an operation:\n1 for Addition\n2 for Subtraction\n3 for Multiplication\n4 for Division");
+
+var num1 = parseFloat(prompt("Enter the first number:"));
+var num2 = parseFloat(prompt("Enter the second number:"));
+
+var result;
+
+// Switch statement to perform the chosen operation
+switch(choice) {
+    case '1':
+        result = add(num1, num2);
+        console.log("Result of Addition: " + result);
+        break;
+    case '2':
+        result = subtract(num1, num2);
+        console.log("Result of Subtraction: " + result);
+        break;
+    case '3':
+        result = multiply(num1, num2);
+        console.log("Result of Multiplication: " + result);
+        break;
+    case '4':
+        result = divide(num1, num2);
+        console.log("Result of Division: " + result);
+        break;
+    default:
+        console.log("Invalid choice. Please select 1, 2, 3, or 4.");
+        break;
+}
+
+    </script>
+</body>
+</html>
