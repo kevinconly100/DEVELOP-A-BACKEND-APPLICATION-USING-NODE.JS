@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+</head>
+<body>
+    <script>
+const person = {
+    firstName: "Tumukunde",
+    lastName: "Jeannine",
+    age: 25,
+    address: {
+        city: "Kigali",
+        country: "Rwanda"
+    }
+};
+
+const { firstName, lastName, age, address: { city, country } } = person;
+
+console.log("First Name: " + firstName); 
+console.log("Last Name: " + lastName); 
+console.log("Age: " + age); 
+console.log("City: " + city); 
+console.log("Country: " + country); 
+
+    </script>
+<!--DIFFRENT BETWEEN TWO DESCTURINGS-->
+    <script>
+        // An array of numbers
+const numbers = [10, 20, 30, 40, 50];
+
+const [first, second, third, ...rest] = numbers;
+
+console.log("First: " + first); 
+console.log("Second: " + second); 
+console.log("Third: " + third); 
+console.log("Rest: " + rest); 
+
+    </script>
+</body>
+</html>

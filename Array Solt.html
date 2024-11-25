@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student array</title>
+</head>
+<body>
+    <script>
+var students = [
+    { name: "Jeannine", age: 22, grade: 85 },
+    { name: "Tumukunde", age: 27, grade: 92 },
+    { name: "Kevin", age: 19, grade: 78 },
+    { name: "Sezerano", age: 18, grade: 10 },
+    { name: "Qwerty", age: 24, grade: 95 }
+];
+
+function getTopStudents(students, threshold) {
+    var topStudents = [];
+    for (var i = 0; i < students.length; i++) {
+        if (students[i].grade > threshold) {
+            topStudents.push(students[i].name);
+        }
+    }
+    return topStudents;
+}
+
+var threshold = 70;
+var topStudents = getTopStudents(students, threshold);
+
+console.log("Students with grades above " + threshold + ": " + topStudents.join(", "));
+
+    </script>
+</body>
+</html>

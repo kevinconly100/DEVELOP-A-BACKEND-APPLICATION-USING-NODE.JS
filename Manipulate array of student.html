@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulate array of student</title>
+</head>
+<body>
+    <script>
+var students = [
+    { name: "John", age: 16, grade: 85 },
+    { name: "Alice", age: 17, grade: 92 },
+    { name: "Bob", age: 16, grade: 78 },
+    { name: "Maria", age: 18, grade: 88 },
+    { name: "Steve", age: 17, grade: 95 }
+];
+
+var studentNames = students.map(student => student.name);
+console.log("Student Names: " + studentNames.join(", "));
+
+var topStudents = students.filter(student => student.grade > 80);
+console.log("Top Students: ", topStudents);
+
+var totalGrade = students.reduce((sum, student) => sum + student.grade, 0);
+var averageGrade = totalGrade / students.length;
+console.log("Average Grade: " + averageGrade);
+
+    </script>
+</body>
+</html>
